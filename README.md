@@ -14,7 +14,7 @@ Add package from git URL ...
 
 ![alt](./docs-img/pm_plus_add.png)
 
-enter package `com.unity.entities` and `com.unity.rendering.hybrid`
+enter package `com.unity.entities`, `com.unity.rendering.hybrid` and `com.unity.platforms`
 
 ![alt](./docs-img/pm_git_url.png)
 
