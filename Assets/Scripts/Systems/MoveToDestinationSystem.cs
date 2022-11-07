@@ -14,25 +14,26 @@ public partial class MoveToDestinationSystem : SystemBase
         // For example,
         float deltaTime = Time.DeltaTime;
 
-        // This declares a new kind of job, which is a unit of work to do.
-        // The job is declared as an Entities.ForEach with the target components as parameters,
-        // meaning it will process all entities in the world that have both
-        // Translation and Rotation components. Change it to process the component
-        // types you want.
         
         
-        
-        Entities.ForEach((ref Translation translation, in Rotation rotation) => {
-            // Implement the work to perform for each entity here.
-            // You should only access data that is local or that is a
-            // field on this job. Note that the 'rotation' parameter is
-            // marked as 'in', which means it cannot be modified,
-            // but allows this job to run in parallel with other jobs
-            // that want to read Rotation component data.
-            // For example,
+        Entities.ForEach((ref Translation translation, ref Rotation rotation, in Destination destination, in MovementSpeed speed) => {
 
-            translation.Value += math.mul(rotation.Value, new float3(0, 0, 1)) * deltaTime;
+            if (math.all(destination.Value == translation.Value)) return;
 
-        }).Schedule();
+            float3 toDestination = destination.Value - translation.Value;
+            rotation.Value = quaternion.LookRotation(toDestination, new float3(0, 1, 0));
+
+            float3 movement = math.normalize(toDestination) * speed.Value * deltaTime;
+
+            if (math.length(movement) >= math.length(toDestination))
+            {
+                translation.Value = destination.Value;
+            }
+            else
+            {
+                translation.Value += movement;
+            }
+
+        }).ScheduleParallel();
     }
 }
