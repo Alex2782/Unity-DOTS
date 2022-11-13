@@ -412,7 +412,7 @@ MonoBehaviour:
     type: 3}
   gridSize: 100
   spread: 5
-  speedRange: {x: 2, y: 30}
+  speedRange: {x: 30, y: 100}
 --- !u!4 &1303616029
 Transform:
   m_ObjectHideFlags: 0
