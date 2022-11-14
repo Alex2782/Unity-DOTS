@@ -201,8 +201,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.31060573, y: 0.24434154, z: -0.08295816, w: 0.9148438}
-  m_LocalPosition: {x: -1.3186626, y: 4.81845, z: -3.0671425}
+  m_LocalRotation: {x: 0.23442948, y: 0.50580674, z: -0.14506854, w: 0.8174091}
+  m_LocalPosition: {x: 99.87179, y: 87.8278, z: 244.41127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -412,7 +412,7 @@ MonoBehaviour:
     type: 3}
   gridSize: 200
   spread: 5
-  speedRange: {x: 10, y: 40}
+  speedRange: {x: 5, y: 20}
 --- !u!4 &1303616029
 Transform:
   m_ObjectHideFlags: 0
