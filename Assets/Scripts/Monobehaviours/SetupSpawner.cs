@@ -35,10 +35,10 @@ public class SetupSpawner : MonoBehaviour
                     Value = position
                 });
 
-                //entityManager.SetComponentData(instance, new Destination
-                //{
-                //    Value = position
-                //});
+                entityManager.SetComponentData(instance, new Destination
+                {
+                    Value = position
+                });
 
                 float speed = UnityEngine.Random.Range(speedRange.x, speedRange.y);
                 entityManager.SetComponentData(instance, new MovementSpeed

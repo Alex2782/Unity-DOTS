@@ -410,9 +410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personPrefab: {fileID: 6777472374294789120, guid: 3319b223eefff4d8c8b335fd534dcdf6,
     type: 3}
-  gridSize: 100
+  gridSize: 200
   spread: 5
-  speedRange: {x: 30, y: 100}
+  speedRange: {x: 10, y: 40}
 --- !u!4 &1303616029
 Transform:
   m_ObjectHideFlags: 0
