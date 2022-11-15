@@ -7,6 +7,7 @@ Window -> Package Manager
 - `com.unity.entities`
 - `com.unity.rendering.hybrid`
 - `com.unity.platforms`
+- `com.unity.physics`
 
 
 
